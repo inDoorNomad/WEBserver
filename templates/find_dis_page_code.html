@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Поиск тем</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+    <style type="text/css">
+                             #user_window, #find_field { position: absolute; }
+                                #top_panel {
+                                background: #313030;
+                                top: 0;
+                                height: 100px;
+                                }
+                                #user_window {
+                                background: #ffffff;
+                                top: 0;
+                                left: 2155px;
+                                height: 100px;
+                                width: 405px;
+                                border-bottom: 2px solid #1677d4;
+                                border-left: 2px solid #1677d4;
+                                }
+                                #find_field {
+                                top: 250px;
+                                background: #fff;
+                                width: 900px;
+                                left: 800px;
+                                border-top: 5px solid #1677d4;
+                                border-bottom: 5px solid #1677d4;
+                                border-left: 2px solid #313030;
+                                border-right: 2px solid #313030;
+                                }
+    </style>
+</head>
+<body style="background: #36D429;">
+<div id="top_panel">
+    <br>
+    <a class="btn" href="/adding_auto"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; margin-left: 1000px;">
+        Добавить авто</a>
+    <a class="btn" href="/"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; margin-left: 20px;">
+        Главная страница</a>
+    <a class="btn" href="/create_dis"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; margin-left: 20px;">
+        Создать тему</a>
+</div>
+<div id="user_window">
+    <h2 style="margin-left: 50px;">{{ sh_username }}</h2>
+    <a href="/profile" class="btn"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; width: 180px;"
+    >Профиль</a>
+    <a href="/registration" class="btn"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; width: 180px; margin-left: 20px;"
+    >регистрация</a>
+</div>
+<div id="find_field" class="form-control">
+    <h1 align="center">Поиск тем:</h1>
+    <br>
+    <form method="post">
+        <input class=form-control style="font-size: 24px;" placeholder="Найти тему" name="find_dis">
+        <br>
+        <br>
+        <select name="tag" class="form-control">
+            <option>Другое</option>
+            <option>Авто</option>
+            <option>Детали</option>
+            <option>ПДД</option>
+        </select>
+        <br>
+        <br>
+        <input name="made_date" class="form-control" placeholder="Дата создания темы:">
+        <br>
+        <br>
+        <input name="dis_autor" class="form-control" placeholder="Автор темы:">
+        <br>
+        <br>
+        <button class="form-control" type="submit" style="background: #1677d4; color: #fff; border: none;">Найти</button>
+        <br>
+    </form>
+</div>
+</body>
+</html>

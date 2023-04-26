@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Главная страница</title>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+    <style type="text/css">
+                             #user_window, #main_input, #tags_field { position: absolute; }
+                                #top_panel {
+                                background: #313030;
+                                top: 0;
+                                height: 100px;
+                                }
+                                #user_window {
+                                background: #ffffff;
+                                top: 0;
+                                left: 2155px;
+                                height: 100px;
+                                width: 405px;
+                                border-bottom: 2px solid #1677d4;
+                                border-left: 2px solid #1677d4;
+                                }
+                                #main_input {
+                                top: 125px;
+                                height: 200px;
+                                width: 1000px;
+                                left: 765px;
+                                }
+                                #tags_field {
+                                top: 350px;
+                                width: 1000px;
+                                left: 765px;
+                                height: 750px;
+                                background: #fff;
+                                border-right: 2px solid #313030;
+                                border-left: 2px solid #313030;
+                                border-top: 5px solid #1677d4;
+                                border-bottom: 5px solid #1677d4;
+                                }
+
+    </style>
+</head>
+<body style="background: #36D429;">
+<div id="top_panel">
+    <br>
+    <a class="btn" href="/adding_auto"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; margin-left: 1000px;">
+        Добавить авто</a>
+    <a class="btn" href="/find_dis"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; margin-left: 20px;">
+        Поиск тем</a>
+    <a class="btn" href="/create_dis"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; margin-left: 20px;">
+        Создать тему</a>
+</div>
+<div id="user_window">
+    <h2 style="margin-left: 50px;">{{ sh_username }}</h2>
+    <a href="/profile" class="btn"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; width: 180px;"
+    >Профиль</a>
+    <a href="/registration" class="btn"
+       style="background: #1677d4; color: #fff; height: 50px; font-size: 20px; width: 180px; margin-left: 10px;"
+    >регистрация</a>
+</div>
+    <form method="post">
+        <div id="main_input">
+            <strong style=" font-size: 100px; color: #ffffff;">AutoDoo</strong>
+            <input class=form-control style="font-size: 24px;" placeholder="Найти авто" name="main_finder">
+        </div>
+            <div id="tags_field" class="form-control">
+                <h1 align="center">Поиск по особенностям:</h1>
+                <br>
+                <h2>По времени производства:</h2>
+                <input name="made_date" class="form_control" placeholder="дата создания авто">
+                <br>
+                <br>
+                <h2>По классу:</h2>
+                <select class="form-control" name="class_auto">
+                    <option>класс А</option>
+                    <option>класс B</option>
+                    <option>класс C</option>
+                    <option>класс D</option>
+                    <option>класс E</option>
+                    <option>класс F</option>
+                    <option>класс S</option>
+                    <option>класс M</option>
+                    <option>класс J</option>
+                    <option>Пикапы</option>
+                </select>
+                <br>
+                <h2>По стране производителя:</h2>
+                <select class="form-control" name="country_maker">
+                    <option>Германия</option>
+                    <option>Франция</option>
+                    <option>Россия/СССР</option>
+                    <option>США</option>
+                    <option>Япония</option>
+                    <option>Италия</option>
+                    <option>Китай</option>
+                </select>
+                <br>
+                <h2>По характеристикам двигателя:</h2>
+                <input name="engines_power" placeholder="мощность двигателя(лс)" class="form-control">
+                <br>
+                <input name="engines_volume" placeholder="объём двигателя(л)" class="form-control">
+                <br>
+                <h2>По размерy:</h2>
+                <input name="height" placeholder="Высота" class="form_control">
+                <input name="width" placeholder="Ширина" class="form_control">
+                <input name="length" placeholder="Длина" class="form_control">
+                (м)
+                <br>
+                <br>
+                <button type="submit" class="form-control" style="background: #1677d4; color: #fff;">Найти</button>
+            </div>
+    </form>
+</body>
+</html>
